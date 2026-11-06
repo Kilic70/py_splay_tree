@@ -1,0 +1,14 @@
+[project]
+name = "py-splay-tree"
+version = "0.1.0"
+description = "A splay tree: a binary search tree that moves the node you just touched to the root, so frequently accessed keys stay near the top."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
