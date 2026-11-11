@@ -36,3 +36,10 @@ I picked bottom-up splaying with explicit parent pointers over the shorter top-d
 `split` empties the original tree and returns two new trees. `merge` requires every key in the right-hand tree to be strictly greater than every key in the left-hand tree; it does not check this, and a bad merge will produce a tree that violates the BST invariant. `merge` also refuses to merge a tree with itself.
 
 Keys must be comparable with `<` and `==`. Values default to `None` when you insert without one, so `find` on a key inserted as `tree.insert(k)` returns `None` rather than raising.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
