@@ -1,6 +1,6 @@
 [project]
 name = "py-splay-tree"
-version = "0.1.0"
+version = "0.1.1"
 description = "A splay tree: a binary search tree that moves the node you just touched to the root, so frequently accessed keys stay near the top."
 requires-python = ">=3.10"
 dependencies = []
